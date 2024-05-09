@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
         useMaterial3: true,
       ),
       home: const MyHomePage(title: 'Aplikasi Laporan Kehilangan di Kampus'),
@@ -36,17 +36,16 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text(widget.title),
+        backgroundColor: null,
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Image.asset(
-              'asset_media/gambar/coba123.jpeg', // Replace with your logo image file
-              width: 100, // Set the logo width
-              height: 100, // Set the logo height
+              'asset_media/gambar/ikon.png', // Replace with your logo image file
+              width: 200, // Set the logo width
+              height: 200, // Set the logo height
             ),
             SizedBox(height: 20), // Add some space between the logo and buttons
             ElevatedButton(
@@ -57,12 +56,20 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 );
               },
-              child: Text('Login'),
-              style: ElevatedButton.styleFrom(
-                minimumSize: Size(MediaQuery.of(context).size.width * 0.3, 50),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10),
+              child: Text(
+                'Login',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 16,
+                  fontWeight: FontWeight.w600,
                 ),
+              ),
+              style: ElevatedButton.styleFrom(
+                minimumSize: Size(MediaQuery.of(context).size.width * 0.32, 50),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(13),
+                ),
+                backgroundColor: Colors.blue,
               ),
             ),
             SizedBox(height: 16),
@@ -74,12 +81,20 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 );
               },
-              child: Text('Sign Up'),
-              style: ElevatedButton.styleFrom(
-                minimumSize: Size(MediaQuery.of(context).size.width * 0.3, 50),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10),
+              child: Text(
+                'Sign Up',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 16,
+                  fontWeight: FontWeight.w600,
                 ),
+              ),
+              style: ElevatedButton.styleFrom(
+                minimumSize: Size(MediaQuery.of(context).size.width * 0.32, 50),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(13),
+                ),
+                backgroundColor: Colors.blue,
               ),
             ),
           ],

@@ -14,37 +14,34 @@ class _lupaPassword extends State<lupaPassword> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Lupa Password"),
-        backgroundColor: Colors.green,
+        backgroundColor: null,
       ),
       body: Center(
         child: Container(
-          decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.all(Radius.circular(12)),
-            boxShadow: [
-              BoxShadow(
-                color: Colors.grey.withOpacity(0.5),
-                spreadRadius: 5,
-                blurRadius: 7,
-                offset: Offset(0, 3),
-              ),
-            ],
-          ),
           width: 300,
           height: 500,
           child: Padding(
-            padding: const EdgeInsets.all(20.0),
+            padding: const EdgeInsets.all(0),
             child: Column(
               children: [
+                Padding(
+                  padding: const EdgeInsets.only(bottom: 0, top: 20),
+                  child: Image.asset(
+                    'asset_media/gambar/icon/forgot.png',
+                    width: 120,
+                    height: 120,
+                  ),
+                ),
                 Align(
                   alignment: Alignment.center,
                   child: Container(
                     padding: EdgeInsets.all(8.0),
                     child: Text(
-                      "Lupa Password",
-                      style:
-                          TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+                      "Waduh Lupa Password",
+                      style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.blue),
                     ),
                   ),
                 ),
@@ -54,15 +51,21 @@ class _lupaPassword extends State<lupaPassword> {
                   textInputType: TextInputType.text,
                   obscureText: false,
                 ),
-                SizedBox(height: 5),
                 GestureDetector(
                   onTap: () {
                     Navigator.of(context)
                         .push(MaterialPageRoute(builder: (_) => signUp()));
                   },
-                  child: Text(
-                    'Cek NIM',
-                    textAlign: TextAlign.center,
+                  child: Align(
+                    alignment: Alignment.centerLeft,
+                    child: Padding(
+                      padding: const EdgeInsets.only(left: 11.0),
+                      child: Text(
+                        'Cek NIM',
+                        style: TextStyle(color: Colors.blue),
+                        textAlign: TextAlign.left,
+                      ),
+                    ),
                   ),
                 ),
                 SizedBox(height: 5),
@@ -82,14 +85,30 @@ class _lupaPassword extends State<lupaPassword> {
                 SizedBox(height: 10),
                 // === BUTTON SIGN UP START ===
                 ElevatedButton(
-                    onPressed: () {
-                      Navigator.of(context).push(
-                        MaterialPageRoute(
-                          builder: (_) => login(),
-                        ),
-                      );
-                    },
-                    child: Text('Confirm')),
+                  onPressed: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (_) => login(),
+                      ),
+                    );
+                  },
+                  child: Text(
+                    'Konfirmasi',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 16,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                  style: ElevatedButton.styleFrom(
+                    minimumSize:
+                        Size(MediaQuery.of(context).size.width * 0.32, 50),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(13),
+                    ),
+                    backgroundColor: Colors.blue,
+                  ),
+                ),
                 // === BUTTON SIGN UP END ===
               ],
             ),
@@ -121,10 +140,6 @@ class TextFormGlobal extends StatelessWidget {
     return Container(
       height: 55,
       padding: const EdgeInsets.all(10),
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.all(Radius.circular(12)),
-      ),
       child: TextFormField(
         controller: controller,
         decoration: InputDecoration(

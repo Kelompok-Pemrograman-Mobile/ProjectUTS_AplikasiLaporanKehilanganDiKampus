@@ -13,27 +13,14 @@ class _SignUp extends State<signUp> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("SIGN UP"),
-        backgroundColor: Colors.green,
+        backgroundColor: null,
       ),
       body: Center(
         child: Container(
-          decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.all(Radius.circular(12)),
-            boxShadow: [
-              BoxShadow(
-                color: Colors.grey.withOpacity(0.5),
-                spreadRadius: 5,
-                blurRadius: 7,
-                offset: Offset(0, 3),
-              ),
-            ],
-          ),
           width: 300,
-          height: 500,
+          height: 600,
           child: Padding(
-            padding: const EdgeInsets.all(20.0),
+            padding: const EdgeInsets.all(0),
             child: Column(
               children: [
                 Align(
@@ -42,11 +29,15 @@ class _SignUp extends State<signUp> {
                     padding: EdgeInsets.all(8.0),
                     child: Text(
                       "Sign Up",
-                      style:
-                          TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+                      style: TextStyle(
+                        fontSize: 25,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.blue,
+                      ),
                     ),
                   ),
                 ),
+                SizedBox(height: 10),
                 TextFormGlobal(
                   controller: TextEditingController(),
                   text: 'Nama Mahasiswa',
@@ -88,17 +79,33 @@ class _SignUp extends State<signUp> {
                   textInputType: TextInputType.visiblePassword,
                   obscureText: true,
                 ),
-                SizedBox(height: 10),
+                SizedBox(height: 15),
                 // === BUTTON SIGN UP START ===
                 ElevatedButton(
-                    onPressed: () {
-                      Navigator.of(context).push(
-                        MaterialPageRoute(
-                          builder: (_) => homepage(),
-                        ),
-                      );
-                    },
-                    child: Text('Sign Up')),
+                  onPressed: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (_) => homepage(),
+                      ),
+                    );
+                  },
+                  child: Text(
+                    'Sign Up',
+                    style: TextStyle(
+                      fontWeight: FontWeight.w600,
+                      color: Colors.white,
+                      fontSize: 16,
+                    ),
+                  ),
+                  style: ElevatedButton.styleFrom(
+                    minimumSize:
+                        Size(MediaQuery.of(context).size.width * 0.32, 50),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(13),
+                    ),
+                    backgroundColor: Colors.blue,
+                  ),
+                ),
                 // === BUTTON SIGN UP END ===
               ],
             ),
@@ -130,10 +137,6 @@ class TextFormGlobal extends StatelessWidget {
     return Container(
       height: 55,
       padding: const EdgeInsets.all(10),
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.all(Radius.circular(12)),
-      ),
       child: TextFormField(
         controller: controller,
         decoration: InputDecoration(
