@@ -88,7 +88,7 @@ class _loginPage extends State<login> {
                           );
                         },
                         child: Text(
-                          'Sign In',
+                          'Masuk',
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 16,
@@ -114,7 +114,7 @@ class _loginPage extends State<login> {
                           );
                         },
                         child: Text(
-                          'Sign Up',
+                          'Daftar',
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 16,

@@ -57,7 +57,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 );
               },
               child: Text(
-                'Login',
+                'Masuk',
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 16,
@@ -82,7 +82,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 );
               },
               child: Text(
-                'Sign Up',
+                'Daftar',
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 16,
@@ -95,6 +95,14 @@ class _MyHomePageState extends State<MyHomePage> {
                   borderRadius: BorderRadius.circular(13),
                 ),
                 backgroundColor: Colors.blue,
+              ),
+            ),
+            SizedBox(height: 200),
+            Text(
+              'Aplikasi Pelaporan Kehilangan di Kampus',
+              style: TextStyle(
+                fontSize: 12,
+                color: Colors.black,
               ),
             ),
           ],
