@@ -78,7 +78,7 @@ class _lupaPassword extends State<lupaPassword> {
                 SizedBox(height: 5),
                 TextFormGlobal(
                   controller: TextEditingController(),
-                  text: 'Confirm Password',
+                  text: 'Konfirmasi Password Baru',
                   textInputType: TextInputType.visiblePassword,
                   obscureText: true,
                 ),

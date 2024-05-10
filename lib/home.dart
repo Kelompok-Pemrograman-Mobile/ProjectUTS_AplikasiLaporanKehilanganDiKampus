@@ -502,7 +502,7 @@ class _BuatLaporanPageState extends State<BuatLaporanPage> {
                   child: ElevatedButton(
                     onPressed: _submitForm,
                     child: Text(
-                      'Kirim',
+                      'Unggah',
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 16,

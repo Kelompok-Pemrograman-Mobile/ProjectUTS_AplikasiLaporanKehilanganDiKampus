@@ -28,7 +28,7 @@ class _SignUp extends State<signUp> {
                   child: Container(
                     padding: EdgeInsets.all(8.0),
                     child: Text(
-                      "Sign Up",
+                      "Daftar Dulu Gaes!",
                       style: TextStyle(
                         fontSize: 25,
                         fontWeight: FontWeight.bold,
@@ -75,7 +75,7 @@ class _SignUp extends State<signUp> {
                 SizedBox(height: 5),
                 TextFormGlobal(
                   controller: TextEditingController(),
-                  text: 'Confirm Password',
+                  text: 'Konfirmasi Password',
                   textInputType: TextInputType.visiblePassword,
                   obscureText: true,
                 ),
@@ -90,7 +90,7 @@ class _SignUp extends State<signUp> {
                     );
                   },
                   child: Text(
-                    'Sign Up',
+                    'Daftar',
                     style: TextStyle(
                       fontWeight: FontWeight.w600,
                       color: Colors.white,
